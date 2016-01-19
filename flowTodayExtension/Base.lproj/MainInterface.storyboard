@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="flowTodayExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100M/500M" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                <rect key="frame" x="0.0" y="22" width="320" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RaA-79-Sac">
+                                <rect key="frame" x="0.0" y="15" width="310" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZM-8z-xdV">
+                                <rect key="frame" x="20" y="57" width="29" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFM-oF-hX9">
+                                <rect key="frame" x="160" y="57" width="65" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="开关蜂窝网">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openOrCloseWWAN:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Rr9-7T-y5K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" id="5If-1t-X9z"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="RaA-79-Sac" secondAttribute="bottom" constant="5" id="708-ic-V8Y"/>
+                            <constraint firstItem="lZM-8z-xdV" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" id="ApW-RA-qOd"/>
+                            <constraint firstItem="RaA-79-Sac" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="Djn-DX-fuY"/>
+                            <constraint firstItem="RaA-79-Sac" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="15" id="IMk-Ea-bZD"/>
+                            <constraint firstItem="GFM-oF-hX9" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="LUZ-Qi-j78"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GFM-oF-hX9" secondAttribute="bottom" id="M2A-5e-ODh"/>
+                            <constraint firstAttribute="trailing" secondItem="RaA-79-Sac" secondAttribute="trailing" constant="10" id="Rfd-Ni-oVy"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="lZM-8z-xdV" secondAttribute="bottom" id="U5l-4c-oPd"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="XaE-3P-dRD"/>
+                            <constraint firstItem="GFM-oF-hX9" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" id="gEs-X9-9So"/>
+                            <constraint firstItem="lZM-8z-xdV" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="sb1-F3-9pj"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="85"/>
+                    <connections>
+                        <outlet property="leftDayLabel" destination="lZM-8z-xdV" id="LMy-dt-4Ue"/>
+                        <outlet property="netUseDetail" destination="GcN-lo-r42" id="142-mG-G1V"/>
+                        <outlet property="netUseProgressView" destination="RaA-79-Sac" id="xwD-5o-suS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="226.5"/>
+        </scene>
+    </scenes>
+</document>
